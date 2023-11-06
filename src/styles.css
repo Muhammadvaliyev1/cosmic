@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: General Sans;
+    src: url(/public/fonts/GeneralSans-Bold.otf);
+}
+@font-face {
+    font-family: General Sans;
+    src: url(/public/fonts/GeneralSans-Medium.otf);
+}
+
+.font-General {
+    font-family: General Sans;
+}
+.font-General-400 {
+    font-family: General Sans;
+    font-weight: 400;
+}
+.bordercolor {
+    border-color: rgba(255, 255, 255, 0.10);
+}
+.h {
+    height: 1029px;
+}
