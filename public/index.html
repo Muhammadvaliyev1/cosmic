@@ -31,35 +31,82 @@
     <div class="bg-brand-green h-[842]">
         <div class="relative w-full text-white max-w-sd mx-auto flex flex-col">
             <div class="absolute bg-brand-space_green rounded-b-full w-full top-0 h-[80%] z-0"></div>
-            <header class="z-10 w-full flex max-w-sl justify-between items sd:gap-x-36 ss:gap-x-14 gap-x-5 mx-auto py-8 px-4">
-                <a href="/" class="mb-3">
-                    <img src="./icons/logo-light 1logo.svg" alt="logo">
+            <nav class="relative max-w-7xl w-full mx-auto py-4 flex justify-between items-center bg-transparent px-4">
+                <a class="text-3xl font-bold leading-none mb-3" href="#">
+                    <img src="./icons/logo-light 1logo.svg">
                 </a>
-                <div class="flex justify-between items-center gap-x-10">
-                    <ul class="lg:flex hidden justify-between ss:gap-x-10 gap-x-5 items-center font-Urbanist text-onest font-semibold">
-                        <li>
-                            <a href="#">Why Us</a>
-                        </li>
-                        <li>
-                            <a href="#">Cost Calculator</a>
-                        </li>
-                        <li>
-                            <button href="#" class="flex justify-between items-center gap-x-1">Teams <div class="mt-1"><img src="./icons/arrow-down-sign-to-navigate 1.svg"></div></button>
-                        </li>
-                        <li>
-                            <a href="#">About Us</a>
-                        </li>
-                        <li>
-                            <a href="#">How It Works</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <button type="button" class="sm:block hidden font-Syne text-onest font-bold py-4 px-8 bg-brand-orange rounded-xl">Hire Now!</button>
-                    <button class="lg:hidden block"><ion-icon class="text-brand-green text-3xl" name="menu-outline"></ion-icon></button>
-                 </div>
-            </header>
+                <ul class="lg:flex hidden justify-between ss:gap-x-10 gap-x-5 items-center font-Urbanist text-onest font-semibold">
+                    <li>
+                        <a href="#">Why Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Cost Calculator</a>
+                    </li>
+                    <li>
+                        <button href="#" class="flex justify-between items-center gap-x-1">Teams <div class="mt-1"><img src="./icons/arrow-down-sign-to-navigate 1.svg"></div></button>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">How It Works</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="flex items-center gap-x-5">
+                    <button type="button" class="lg:block hidden font-Syne text-onest font-bold py-4 px-8 bg-brand-orange rounded-xl">Hire Now!</button>
+                    <div class="lg:hidden">
+                        <button class="navbar-burger flex items-center p-3">
+                            <ion-icon class="text-brand-green text-3xl" name="menu-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-brand-green overflow-hidden">
+                    <div class="flex items-center mb-8">
+                        <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                            <img src="./icons/logo-light 1logo.svg">
+                        </a>
+                        <button class="navbar-close">
+                            <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <ul class="flex flex-col justify-between ss:gap-x-10 gap-x-5 gap-y-4 text-white items-start font-Urbanist text-onest font-semibold">
+                            <li>
+                                <a href="#">Why Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Cost Calculator</a>
+                            </li>
+                            <li>
+                                <button href="#" class="flex justify-between items-center gap-x-1">Teams <div class="mt-1"><img src="./icons/arrow-down-sign-to-navigate 1.svg"></div></button>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">How It Works</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="pt-6">
+                            <button type="button" class="font-Syne text-onest font-bold py-4 px-8 bg-brand-orange rounded-xl w-full text-white">Hire Now!</button>
+                        </div>
+                        <h3 class="font-General-400 text-center text-brand-space_gray my-4">© 2023 Cosmic® Global Inc.</h3>
+                    </div>
+                </nav>
+            </div>
             <section class="relative z-10 felx flex-col justify-between items-center text-center max-w-sl mx-auto w-full mt-24 pb-64 px-4">
                 <div class="z-0 sm:block hidden absolute left-0 top-0">
                     <img src="./icons/Group (1).svg">
@@ -574,6 +621,48 @@
         </div>
     </footer>
     
+    <script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function() {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+        
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+        
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./app.js"></script>

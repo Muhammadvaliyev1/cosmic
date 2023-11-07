@@ -6,3 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownContent.classList.toggle('hidden');
     });
 });
+
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const menu = document.getElementById('menu');
+
+hamburgerMenu.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+});
+
